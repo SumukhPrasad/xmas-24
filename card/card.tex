@@ -1,0 +1,91 @@
+\documentclass[12pt]{report}
+\usepackage[paperheight=8in,paperwidth=8in, margin=0cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\color{green}\fontsize{5}{3}\selectfont,upquote=true,showstringspaces=false}
+\usepackage[T1]{fontenc}
+\usepackage{cascadia-code}
+\newcommand{\w}[1]{{\color{white}#1}}
+\usepackage{transparent}
+\definecolor{topcolor} {HTML}{0e1d52}
+\definecolor{bottomcolor} {HTML}{3e255d}
+
+\usepackage{parallel}
+
+\begin{document}
+
+
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+	\node [shading = axis,rectangle, left color=topcolor, right color=bottomcolor,shading angle=0, anchor=north, minimum width=\paperwidth, minimum height=\paperheight] (box) at (current page.north){}; % gradient
+	
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-3)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-9.5)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-16)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	
+	%\node[inner sep=0pt, rotate=180] (bottom) at (13,-0.5)
+		%{\includegraphics[width=1\textwidth]{images/tree.png}}; % tree	
+	
+	\node[inner sep=0pt, rotate=180] (top) at (9.5,-0.25)
+		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=90] (left) at (19,-10)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=270] (right) at (0.1,-10)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=0] (bottom) at (9.5,-19.25)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+\end{tikzpicture}
+
+\vspace*{\fill}
+\begin{center}
+	
+	\w{
+	{\Huge\textbf{Merry Christmas!}}\\
+	}
+
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+	\node [shading = axis,rectangle, left color=topcolor, right color=bottomcolor,shading angle=0, anchor=north, minimum width=\paperwidth, minimum height=\paperheight] (box) at (current page.north){}; % gradient
+	
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-3)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-9.5)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	\node[inner sep=0pt, rotate=180] (bottom) at (9.5,-16)
+		{\includegraphics[width=1\textwidth]{images/snow.png}};
+	
+	%\node[inner sep=0pt, rotate=180] (bottom) at (13,-0.5)
+		%{\includegraphics[width=1\textwidth]{images/tree.png}}; % tree	
+	
+	\node[inner sep=0pt, rotate=180] (top) at (9.5,-0.25)
+		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=90] (left) at (19,-10)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=270] (right) at (0.1,-10)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+	\node[inner sep=0pt, rotate=0] (bottom) at (9.5,-19.25)
+    		{\includegraphics[width=1\textwidth]{images/bulbs.png}};
+\end{tikzpicture}
+
+\vspace*{\fill}
+\begin{center}
+	\begin{tabular}{c}
+		\lstinputlisting[language=C]{../code/tree.c}
+	\end{tabular}
+
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+
+\end{document}
