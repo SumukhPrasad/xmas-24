@@ -168,12 +168,3 @@ int main() {
 		usleep(1000000);
 	}    
 }
-
-
-int testColors() {
-	for(size_t i = 0; i < ((GREEN_COLOR_END - GREEN_COLOR_START)/GREEN_COLOR_JUMP)+1; ++i){
-		int n = 46-(i*6);
-		printf("\x1b[38;5;%dm" "x1b[38;5;%dm" RESET "\n", n, n);
-	}
-	return 0;
-}
