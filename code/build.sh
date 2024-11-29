@@ -1,1 +1,1 @@
-clear && gcc -o main main.c -lm && ./main
+clear && gcc -o main tree.c -lm && ./main
